@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import { Col, Row, Container } from "react-bootstrap";
-import API from "../utils/GoogleBooksAPI"
-import Book from '../components/Book';
+import API from "../utils/TaskAPI"
+import Task from '../components/Task';
 
 class Saved extends Component {
     state = {
-        books: []
+        tasks: []
     };
 
     componentDidMount() {
-        this.loadBooks();
+        this.loadTasks();
     }
 
-    loadBooks = () => {
-        API.getBooks()
+    loadTasks = () => {
+        API.getTasks()
             .then(res => {
                 console.log(res.data)
-                this.setState({ books: res.data })
+                this.setState({ tasks: res.data })
             })
             .catch(err => console.log(err));
     };
 
     deleteBtn = (id) => {
-        API.deleteBook(id)
+        API.deleteTask(id)
             .then(res => {
-                console.log("Book deleted\n", res)
-                this.loadBooks();
+                console.log("Task deleted\n", res)
+                this.loadTasks();
             })    
             .catch(err => console.log(err));
     }
@@ -35,25 +35,25 @@ class Saved extends Component {
             <Container fluid>
                 <Row>
                     <Col size="md-12">
-                        {this.state.books.length ? (
+                        {this.state.tasks.length ? (
                             <div>
-                                <h5>Saved Books</h5>
-                                {this.state.books.map(book => (
-                                    <Book
-                                        key={book._id}
+                                <h5>Saved Tasks</h5>
+                                {this.state.tasks.map(task => (
+                                    <Task
+                                        key={task._id}
                                         label="Delete"
-                                        id={book._id}
-                                        title={book.title}
-                                        authors={book.authors}
-                                        description={book.description}
-                                        link={book.link}
-                                        image={book.image}
-                                        btnFunc={() => this.deleteBtn(book._id)}
+                                        id={task._id}
+                                        title={task.title}
+                                        authors={task.authors}
+                                        description={task.description}
+                                        link={task.link}
+                                        image={task.image}
+                                        btnFunc={() => this.deleteBtn(task._id)}
                                     />
                                 ))}
                             </div>
                         ) : (
-                                <h5>No books saved</h5>
+                                <h5>No tasks saved</h5>
                             )}
                     </Col>
                 </Row>

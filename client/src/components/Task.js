@@ -2,10 +2,10 @@ import React from 'react';
 import { Col, Row } from "react-bootstrap";
 import Media from 'react-bootstrap/Media'
 
-const Book = props => {
+const Task = props => {
 
     return (
-        <div key={props.id} className="p-3 mb-3 bg-light shadow rounded">
+        <div key={props.id} className="p-3 mb-3 bg-dark shadow rounded">
             <Media className="my-2">
                 <img
                     width={100}
@@ -61,4 +61,4 @@ const Book = props => {
     );
 };
 
-export default Book;
+export default Task;

@@ -19,7 +19,7 @@ app.use(logger("dev"));
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/abode";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Define API routes here

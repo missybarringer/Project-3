@@ -6,9 +6,9 @@ const Header = () => {
     return (
         <Jumbotron fluid>
             <Container>
-                <h1 className="text-center">React Google Books Search</h1>
+                <h1 className="text-center">Abode Organizer</h1>
                 <p className="text-center lead">
-                    Search and save books of interest
+                    Search and save items of interest
                 </p>
             </Container>
         </Jumbotron>
