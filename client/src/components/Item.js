@@ -17,43 +17,15 @@ const Item = props => {
                 >
                     <Row>
                         <Col sm={9}>
-                            <h5>{props.title}</h5>
+                            <h5>{props.name}</h5>
                         </Col>
                         <Col sm={3} className="d-flex justify-content-end">
-                            <a
-                                href={props.link}
-                                data-id={props.id}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-sm btn-outline-secondary mr-1">
-                                View
-                            </a>
-
-                            <button
-                                className={"btn btn-sm " +
-                                    ((props.label === "Save") ?
-                                    "btn-outline-primary" :
-                                    "btn-outline-danger")
-                                }
-                                data-id={props.id}
-                                onClick={() => {
-                                    props.btnFunc(
-                                        props.id,
-                                        props.title,
-                                        props.authors,
-                                        props.description,
-                                        props.link,
-                                        props.image
-                                    )
-                                    console.log(props.id)
-                                }}>
-                                {props.label}
-                            </button>
+                            <h5>Quantity Remaining: {props.quantity}</h5>
                         </Col>
                     </Row>
                     <Row className="pl-3">
-                        <p className="pr-3">Author(s): {props.authors.join(", ")}</p>
-                        <p className="pr-3">{props.description}</p>
+                        <p className="pr-3">Category: {props.category}</p>
+                        <p className="pr-3">Notes: {props.notes}</p>
                     </Row>
                 </Media.Body>
             </Media>
