@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from "react-bootstrap";
 import Media from 'react-bootstrap/Media'
 
-const Task = props => {
+const Item = props => {
 
     return (
         <div key={props.id} className="p-3 mb-3 bg-dark shadow rounded">
@@ -61,4 +61,4 @@ const Task = props => {
     );
 };
 
-export default Task;
+export default Item;
