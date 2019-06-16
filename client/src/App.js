@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import TopNav from "./components/TopNav";
 import Header from "./components/Header";
-import Search from "./pages/Search";
 import Saved from "./pages/Saved";
+import AddItem from "./pages/AddItem";
+import Stock from "./pages/Stock";
+import Chart from "./pages/Chart";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NoMatch from "./pages/NoMatch";
-
 
 class App extends Component {
     render() {
@@ -16,11 +16,10 @@ class App extends Component {
                 <Router>
                     <div>
                         <Switch>
-                            <Route exact path="/" component={Search} />
-                            <Route exact path="/search" component={Search} />
-                            <Route exact path="/saved" component={Saved} />
-                            <Route exact path="/saved/:id" component={Saved} />
-                            <Route component={NoMatch} />
+                            <Route exact path="/" component={Saved} />
+                            <Route exact path="/additem" component={AddItem} />
+                            <Route exact path="/stock" component={Stock} />
+                            <Route exact path="/chart" component={Chart} />
                         </Switch>
                     </div>
                 </Router>

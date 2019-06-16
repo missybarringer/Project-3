@@ -8,7 +8,7 @@ const Header = () => {
             <Container>
                 <h1 className="text-center">Abode Organizer</h1>
                 <p className="text-center lead">
-                    Search and save items of interest
+                    Track items
                 </p>
             </Container>
         </Jumbotron>

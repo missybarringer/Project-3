@@ -4,14 +4,16 @@ import Nav from "react-bootstrap/Nav";
 
 const TopNav = () => {
     return (
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="/">Abode Organizer</Navbar.Brand>
-            <Nav className="mr-auto">
-                <Nav.Link href="/search">Add Item</Nav.Link>
-                <Nav.Link href="/saved">Saved</Nav.Link>
-                <Nav.Link href="/saved">Stock</Nav.Link>
-                <Nav.Link href="/saved">Chart</Nav.Link>
-            </Nav>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+                <Nav className="align-right">
+                    <Nav.Link href="/additem">Add Item</Nav.Link>
+                    <Nav.Link href="/stock">Stock</Nav.Link>
+                    <Nav.Link href="/chart">Chart</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
         </Navbar>
     );
 };
