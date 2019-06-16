@@ -3,7 +3,7 @@ import TopNav from "./components/TopNav";
 import Header from "./components/Header";
 // import LoginNav from "./components/LoginNav";
 import Login from "./pages/Login";
-// import Signup from "./pages/Signup";
+import Signup from "./pages/Signup";
 import SavedItems from "./pages/SavedItems";
 import AddItem from "./pages/AddItem";
 import Stock from "./pages/Stock";
@@ -25,6 +25,7 @@ class App extends Component {
                                 {/* once authentication is built, update paths so that login is '/' and saveditems is '/home' */}
                                 <Route exact path="/" component={SavedItems} />
                                 <Route exact path="/login" component={Login} />
+                                <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/additem" component={AddItem} />
                                 <Route exact path="/stock" component={Stock} />
                                 <Route exact path="/chart" component={Chart} />
