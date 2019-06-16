@@ -17,6 +17,19 @@ class Search extends Component {
         });
     };
 
+    displayItem = event => {
+        event.preventDefault();
+        // if (this.state.query) {
+        //     API.searchGoogle(this.state.query)
+        //         .then(res => {
+        //             console.log(res.data.items);
+        //             this.setState({ books: res.data.items })
+        //         })
+        //         // .then(res => this.loadBooks())
+        //         .catch(err => console.log(err));
+        // }
+    };
+
     saveBtn = (id, category, name, quantity, notes) => {
         API.saveItem({
             _id: id,
@@ -25,19 +38,29 @@ class Search extends Component {
             quantity: quantity,
             notes: notes
         })
-            .then(res => console.log("Item saved", res))
+            .then(res => alert("Item saved", res))
             .catch(err => console.log(err));
     }
 
     render() {
         return (
-            <Container fluid>
+            <Container>
                 <Row>
-                    <Col size="md-12">
+                    <Col size="md-4">
                         <h3>Add Item</h3>
                         <Form>
-                            <Form.Group controlId="formGroupItem">
-                                <Form.Label></Form.Label>
+                            <Form.Group controlId="formCategory">
+                                <Form.Label>Item Category</Form.Label>
+                                <Form.Control as="select">
+                                    <option>Cleaning Supplies</option>
+                                    <option>General Household</option>
+                                    <option>Groceries</option>
+                                    <option>Auto</option>
+                                    <option>Bills</option>
+                                </Form.Control>
+                            </Form.Group>
+                            <Form.Group controlId="formName">
+                                <Form.Label>Item Name</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Item Name"
@@ -46,7 +69,14 @@ class Search extends Component {
                                     onChange={this.handleInputChange}
                                 />
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                            <Form.Group controlId="formNotes">
+                                <Form.Label>Quantity</Form.Label>
+                                <Form.Control 
+                                    type="number"
+                                    placeholder="Quantity"
+                                />
+                            </Form.Group>
+                            <Form.Group controlId="formNotes">
                                 <Form.Label>Notes</Form.Label>
                                 <Form.Control 
                                     as="textarea" 
@@ -57,7 +87,7 @@ class Search extends Component {
                                 variant="success"
                                 type="submit"
                                 // disabled={!(this.state.query)}
-                                onClick={this.saveBtn}
+                                onClick={this.displayItem}
                             >
                                 Save
                             </Button>
@@ -78,6 +108,7 @@ class Search extends Component {
                                         name={item.name}
                                         quantity={item.quantity}
                                         notes={item.notes}
+                                        btnFunc={this.saveBtn}
                                     />
                                 ))}
                             </div>

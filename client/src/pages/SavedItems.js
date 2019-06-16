@@ -3,7 +3,7 @@ import { Col, Row, Container } from "react-bootstrap";
 import API from "../utils/ItemAPI"
 import Item from '../components/Item';
 
-class Saved extends Component {
+class SavedItems extends Component {
     state = {
         items: []
     };
@@ -32,9 +32,9 @@ class Saved extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <Container>
                 <Row>
-                    <Col size="md-12">
+                    <Col size="md-4">
                         {this.state.items.length ? (
                             <div>
                                 <h5>Saved Items</h5>
@@ -43,17 +43,16 @@ class Saved extends Component {
                                         key={item._id}
                                         label="Delete"
                                         id={item._id}
-                                        title={item.title}
-                                        authors={item.authors}
-                                        description={item.description}
-                                        link={item.link}
-                                        image={item.image}
+                                        category={item.category}
+                                        name={item.name}
+                                        quantity={item.quantity}
+                                        notes={item.notes}
                                         btnFunc={() => this.deleteBtn(item._id)}
                                     />
                                 ))}
                             </div>
                         ) : (
-                                <h5>No items saved</h5>
+                                <h5>No Items Saved</h5>
                             )}
                     </Col>
                 </Row>
@@ -63,4 +62,4 @@ class Saved extends Component {
     }
 }
 
-export default Saved;
+export default SavedItems;

@@ -9,8 +9,8 @@ const LoginNav = () => {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
                 <Nav className="align-right">
-                    <Nav.Link href="/additem">Login</Nav.Link>
-                    <Nav.Link href="/stock">Signup</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/signup">Signup</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
