@@ -6,7 +6,8 @@ const itemSchema = new Schema({
     category: { type: String, required: true },
     name: { type: Array, required: true },
     quantity: Number,
-    notes: String
+    notes: String,
+    date: { type: Date, default: Date.now }
 }, { _id: false });
 
 const Item = mongoose.model("Item", itemSchema);
