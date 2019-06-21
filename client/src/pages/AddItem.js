@@ -7,6 +7,12 @@ import Item from '../components/Item';
 class Search extends Component {
     state = {
         items: [],
+        id: "",
+        category: "",
+        name: "",
+        quantity: "",
+        notes: "",
+        date: "",
         query: ""
     };
 
@@ -30,18 +36,30 @@ class Search extends Component {
         // }
     };
 
-    saveBtn = (id, category, name, quantity, notes) => {
+    // saveBtn = (id, category, name, quantity, notes) => {
+    //     API.saveItem({
+    //         _id: id,
+    //         category: category,
+    //         name: name,
+    //         quantity: quantity,
+    //         notes: notes
+    //     })
+    //         .then(res => alert("Item saved", res))
+    //         .catch(err => console.log(err));
+    // }
+    handleFormSubmit = event => {
+        event.preventDefault();
         API.saveItem({
-            _id: id,
-            category: category,
-            name: name,
-            quantity: quantity,
-            notes: notes
+            _id: this.state.id,
+            category: this.state.category,
+            name: this.state.name,
+            quantity: this.state.quantity,
+            notes: this.state.notes,
+            date: this.state.date
         })
             .then(res => alert("Item saved", res))
             .catch(err => console.log(err));
     }
-
     render() {
         return (
             <Container>
@@ -52,11 +70,13 @@ class Search extends Component {
                             <Form.Group controlId="formCategory">
                                 <Form.Label>Item Category</Form.Label>
                                 <Form.Control as="select">
+                                    <option>Baby Products</option>
                                     <option>Cleaning Supplies</option>
                                     <option>General Household</option>
                                     <option>Groceries</option>
-                                    <option>Auto</option>
-                                    <option>Bills</option>
+                                    <option>Office Supplies</option>
+                                    <option>Personal Hygiene</option>
+                                    <option>Pet Supplies</option>
                                 </Form.Control>
                             </Form.Group>
                             <Form.Group controlId="formName">
@@ -87,7 +107,8 @@ class Search extends Component {
                                 variant="success"
                                 type="submit"
                                 // disabled={!(this.state.query)}
-                                onClick={this.displayItem}
+                                // used to call saveBtn on line 39 with API returned info MMB
+                                onClick={this.handleFormSubmit}
                             >
                                 Save
                             </Button>
@@ -108,6 +129,7 @@ class Search extends Component {
                                         name={item.name}
                                         quantity={item.quantity}
                                         notes={item.notes}
+                                        date={item.date}
                                         btnFunc={this.saveBtn}
                                     />
                                 ))}
