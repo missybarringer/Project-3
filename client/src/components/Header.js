@@ -1,9 +1,19 @@
-import React from "react";
+import React, { Component } from 'react';
 import { Jumbotron, Container, Button } from "react-bootstrap";
 
 
-const Header = () => {
+class Header extends Component {
 
+constuctor() {
+    this.handlePageChange = this.handlePageChange.bind(this);
+    }
+
+handlePageChange() {
+    window.location = "/additem";
+}
+
+render() {
+    
     var divStyle = {
         margin: "20px",
         display: "inline"
@@ -25,7 +35,7 @@ const Header = () => {
                                 variant="primary"
                                 type="submit"
                                 // not yet working
-                                onClick={("/additem")}
+                                onClick={this.handlePageChange}
                             >
                                 Add Items
                             </Button>
@@ -34,5 +44,5 @@ const Header = () => {
         </Jumbotron>
     );
 };
-
+}
 export default Header;
