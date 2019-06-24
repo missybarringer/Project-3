@@ -1,0 +1,19 @@
+* {
+    /* font-family: 'Amatic SC', cursive; */
+    /* font-family: 'Cinzel', serif; */
+    font-family: 'Permanent Marker', cursive;
+}
+
+.align-center {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+}
+
+h1 {
+    color: black;
+
+}
