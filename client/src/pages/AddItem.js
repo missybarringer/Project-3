@@ -3,6 +3,9 @@ import { Col, Row, Container, Button, Form } from "react-bootstrap";
 import API from "../utils/ItemAPI"
 import Item from '../components/Item';
 import { Input, TextArea } from "../components/Form";
+import DayPickerInput from "react-day-picker/DayPickerInput";
+
+import "react-day-picker/lib/style.css";
 
 
 class Search extends Component {
@@ -42,6 +45,7 @@ class Search extends Component {
             .catch(err => console.log(err));
     }
     render() {
+        const { selectedDay } = this.state
         return (
             <Container>
                 <Row>
@@ -73,6 +77,10 @@ class Search extends Component {
                             placeholder="Notes (Optional)" 
                             rows="3"
                             />
+                            <DayPickerInput 
+                            value={selectedDay}
+                            placeholer="DD/MM/YYYY" 
+                            format="DD/MM/YYYY" /><br />
                             <Button
                                 variant="dark"
                                 type="submit"
