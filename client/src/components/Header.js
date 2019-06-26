@@ -21,8 +21,10 @@ render() {
 
     return (
         <Jumbotron fluid>
-            <Container className="text-center lead">
+            <Container className="text-center lead jumbotron-text">
                 {/* <h1 className="text-center">Abode Organizer</h1> */}
+                {/* <img src="../../images/logo.png" alt="abode logo" height="300px" /> */}
+                <br />
                 <p>
                 Abode Organizer is a home organization helper tool that 
                 helps families keep track of recurring activities or home 
@@ -32,7 +34,7 @@ render() {
                     <div>
                         <h4 style={divStyle}>GET STARTED:</h4>
                             <Button
-                                variant="primary"
+                                variant="dark"
                                 type="submit"
                                 // not yet working
                                 onClick={this.handlePageChange}

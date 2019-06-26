@@ -4,6 +4,43 @@
     font-family: 'Permanent Marker', cursive;
 }
 
+body {
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    max-height: 100px;
+    
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    background-color: #dbdaded2;
+}
+
+.logo {
+    height: 100px;
+    width: 180px;
+    margin-left: -50px;
+}
+
+.logo-watermark {
+    position: fixed;
+    height: 90%;
+    z-index: -10;
+    opacity: 0.1;
+}
+
+.chart {
+    margin: 0 10%;
+    text-align: center;
+}
+
+/* .jumbotron .container {
+    opacity: 1;
+} */
+
 .align-center {
     position: absolute;
     width: 70%;
