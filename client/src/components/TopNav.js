@@ -6,11 +6,11 @@ const TopNav = () => {
     return (
         <Navbar bg="light" variant="light">
             <Navbar.Brand href="/">
-                <img src="../../images/logo.png" alt="abode logo" height="80px" width="130px"/>
+                <img className="logo" src="../../images/logo.png" alt="abode logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Text className="align-center">
-                <h1>ABODE</h1>
+                {/* <h1>ABODE</h1> */}
             </Navbar.Text>
             <Navbar.Collapse className="justify-content-end">
                 <Nav className="align-right">

@@ -16,13 +16,14 @@ const data = [
   const Chart = props => {
 
     return (
-        <div key={props.id} className="p-3 mb-3 bg-dark shadow rounded">
+        <div key={props.id} className="p-3 mb-3 bg-dark shadow rounded chart">
             <Media className="my-2">
                 <Media.Body
                     className="ml-3"
                 >
-            <div style={{ display: "flex", flexWrap: "wrap"}}>
-            <h1></h1>
+            {/* <div style={{ display: "flex", flexWrap: "wrap"}}> */}
+            <div>
+            <h1>Test Chart</h1>
             <VictoryChart style={{ parent: { maxWidth: "30%" } }}
             domainPadding={10}
             theme={VictoryTheme.material}
