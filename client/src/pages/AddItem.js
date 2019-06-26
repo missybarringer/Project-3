@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Col, Row, Container, Button, Form } from "react-bootstrap";
 import API from "../utils/ItemAPI"
 import Item from '../components/Item';
+import { Input, TextArea } from "../components/Form";
 
 
 class Search extends Component {
@@ -25,32 +26,12 @@ class Search extends Component {
 
     displayItem = event => {
         event.preventDefault();
-        // if (this.state.query) {
-        //     API.searchGoogle(this.state.query)
-        //         .then(res => {
-        //             console.log(res.data.items);
-        //             this.setState({ books: res.data.items })
-        //         })
-        //         // .then(res => this.loadBooks())
-        //         .catch(err => console.log(err));
-        // }
     };
-
-    // saveBtn = (id, category, name, quantity, notes) => {
-    //     API.saveItem({
-    //         _id: id,
-    //         category: category,
-    //         name: name,
-    //         quantity: quantity,
-    //         notes: notes
-    //     })
-    //         .then(res => alert("Item saved", res))
-    //         .catch(err => console.log(err));
-    // }
+    
     handleFormSubmit = event => {
         event.preventDefault();
+        console.log("Category " + this.state.category + "Name " + this.state.name + "quant " + this.state.quantity + "notes " + this.state.notes + "date " + this.state.date);
         API.saveItem({
-            _id: this.state.id,
             category: this.state.category,
             name: this.state.name,
             quantity: this.state.quantity,
@@ -67,42 +48,31 @@ class Search extends Component {
                     <Col size="md-4">
                         <h3>Add Item</h3>
                         <Form>
-                            <Form.Group controlId="formCategory">
-                                <Form.Label>Item Category</Form.Label>
-                                <Form.Control as="select">
-                                    <option>Baby Products</option>
-                                    <option>Cleaning Supplies</option>
-                                    <option>General Household</option>
-                                    <option>Groceries</option>
-                                    <option>Office Supplies</option>
-                                    <option>Personal Hygiene</option>
-                                    <option>Pet Supplies</option>
-                                </Form.Control>
-                            </Form.Group>
-                            <Form.Group controlId="formName">
-                                <Form.Label>Item Name</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Item Name"
-                                    value={this.state.query}
-                                    name="query"
-                                    onChange={this.handleInputChange}
-                                />
-                            </Form.Group>
-                            <Form.Group controlId="formNotes">
-                                <Form.Label>Quantity</Form.Label>
-                                <Form.Control 
-                                    type="number"
-                                    placeholder="Quantity"
-                                />
-                            </Form.Group>
-                            <Form.Group controlId="formNotes">
-                                <Form.Label>Notes</Form.Label>
-                                <Form.Control 
-                                    as="textarea" 
-                                    rows="3" 
-                                />
-                            </Form.Group>
+                            <Input
+                            value={this.state.category}
+                            onChange={this.handleInputChange}
+                            name="category"
+                            placeholder="Category (required)"
+                            />
+                            <Input
+                            value={this.state.name}
+                            onChange={this.handleInputChange}
+                            name="name"
+                            placeholder="Name (required)"
+                            />
+                            <Input
+                            value={this.state.quantity}
+                            onChange={this.handleInputChange}
+                            name="quantity"
+                            placeholder="Quantity (required)"
+                            />
+                            <TextArea 
+                            value={this.state.notes}
+                            onChange={this.handleInputChange}
+                            name="notes" 
+                            placeholder="Notes (Optional)" 
+                            rows="3"
+                            />
                             <Button
                                 variant="dark"
                                 type="submit"
@@ -122,15 +92,13 @@ class Search extends Component {
                                 <h5>Items Tracked</h5>
                                 {this.state.items.map(item => (
                                     <Item
-                                        key={item.id}
                                         label="Saved"
-                                        id={item.id}
                                         category={item.category}
                                         name={item.name}
                                         quantity={item.quantity}
                                         notes={item.notes}
                                         date={item.date}
-                                        btnFunc={this.saveBtn}
+                                        btnFunc={this.handleFormSubmit}
                                     />
                                 ))}
                             </div>

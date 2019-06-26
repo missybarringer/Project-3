@@ -2,13 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
-    _id: { type: String, required: true },
     category: { type: String, required: true },
-    name: { type: Array, required: true },
+    name: { type: String, required: true },
     quantity: Number,
     notes: String,
     date: { type: Date, default: Date.now }
-}, { _id: false });
+});
 
 const Item = mongoose.model("Item", itemSchema);
 
