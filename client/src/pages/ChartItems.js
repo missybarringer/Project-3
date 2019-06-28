@@ -21,15 +21,6 @@ class ChartItems extends Component {
             .catch(err => console.log(err));
     };
 
-    deleteBtn = (id) => {
-        API.deleteItem(id)
-            .then(res => {
-                console.log("Item deleted\n", res)
-                this.loadItems();
-            })    
-            .catch(err => console.log(err));
-    }
-
     render() {
         return (
             <Container>
@@ -47,6 +38,7 @@ class ChartItems extends Component {
                                         name={item.name}
                                         quantity={item.quantity}
                                         notes={item.notes}
+                                        date={item.date}
                                         btnFunc={() => this.deleteBtn(item._id)}
                                     />
                                 ))}

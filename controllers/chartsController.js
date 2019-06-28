@@ -1,6 +1,8 @@
 const db = require("../models");
 
-// Defining methods for the itemsController
+// Defining methods for the chartsController
+//Only including methods for findall and findbyid.  Not sure if findbyid will get
+//get used but leaving for now.
 module.exports = {
     findAll: function(req, res) {
         db.Item
@@ -15,23 +17,4 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    create: function(req, res) {
-        db.Item
-            .create(req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
-    update: function(req, res) {
-        db.Item
-            .findOneAndUpdate({ _id: req.params.id }, req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
-    remove: function(req, res) {
-        db.Item
-            .findById({ _id: req.params.id })
-            .then(dbModel => dbModel.remove())
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    }
 };
