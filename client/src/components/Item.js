@@ -1,11 +1,11 @@
 import React from 'react';
 import { Col, Row } from "react-bootstrap";
-import Media from 'react-bootstrap/Media'
+import Media from 'react-bootstrap/Media';
 
 const Item = props => {
 
     return (
-        <div key={props.id} className="p-3 mb-3 bg-dark shadow rounded">
+        <div key={props.id} className="p-3 mb-3 bg-secondary shadow rounded">
             <Media className="my-2">
                 <img
                     width={100}
@@ -19,7 +19,7 @@ const Item = props => {
                         <Col sm={9}>
                             <h5>{props.name}</h5>
                         </Col>
-                        <Col sm={3} className="d-flex justify-content-end">
+                        <Col sm={3} className="d-flex justify-content-end itemColor rounded">
                             <h5>Quantity Remaining: {props.quantity}</h5>
                         </Col>
                     </Row>
