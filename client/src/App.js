@@ -7,7 +7,7 @@ import Signup from "./pages/Signup";
 import SavedItems from "./pages/SavedItems";
 import AddItem from "./pages/AddItem";
 import Stock from "./pages/Stock";
-import Chart from "./pages/Chart";
+import ChartItems from "./pages/ChartItems";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -28,7 +28,7 @@ class App extends Component {
                                 <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/additem" component={AddItem} />
                                 <Route exact path="/stock" component={Stock} />
-                                <Route exact path="/chart" component={Chart} />
+                                <Route exact path="/chart" component={ChartItems} />
                             </Switch>
                         </div>
                     </Router>

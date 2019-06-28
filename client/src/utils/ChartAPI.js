@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export default {
-    // Gets all charts
+    // Gets all items
     getItems: function() {
         return axios.get("/api/charts");
     },
