@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { Col, Row, Container } from "react-bootstrap";
 import API from "../utils/ChartAPI"
-import Item from '../components/Chart';
+// import Item from '../components/Chart';
+import BarChart from './Chart';
+
 
 class ChartItems extends Component {
     state = {
         items: []
     };
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.loadItems();
     }
 
@@ -17,6 +19,8 @@ class ChartItems extends Component {
             .then(res => {
                 console.log(res.data)
                 this.setState({ items: res.data })
+                // count = this.state.items.length;
+                // console.log(count);
             })
             .catch(err => console.log(err));
     };
@@ -24,32 +28,8 @@ class ChartItems extends Component {
     render() {
         return (
             <Container>
-                <Row>
-                    <Col size="md-4">
-                        {this.state.items.length ? (
-                            <div>
-                                <h5>Saved Items</h5>
-                                {this.state.items.map(item => (
-                                    <Item
-                                        key={item._id}
-                                        label="Delete"
-                                        id={item._id}
-                                        category={item.category}
-                                        name={item.name}
-                                        quantity={item.quantity}
-                                        notes={item.notes}
-                                        date={item.date}
-                                        btnFunc={() => this.deleteBtn(item._id)}
-                                    />
-                                ))}
-                            </div>
-                        ) : (
-                                <h5>No Items Saved</h5>
-                            )}
-                    </Col>
-                </Row>
+                <BarChart/>
             </Container>
-
         );
     }
 }
