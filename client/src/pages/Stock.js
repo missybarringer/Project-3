@@ -10,6 +10,7 @@ class Stock extends Component {
     render() {
         return (
             <Container>
+                <br />
                 <Row>
                     <Col size="md-4">
                         {this.state.items.length ? (

@@ -48,6 +48,7 @@ class Search extends Component {
         const { selectedDay } = this.state
         return (
             <Container>
+                <br />
                 <Row>
                     <Col size="md-4">
                         <h3>Add Item</h3>

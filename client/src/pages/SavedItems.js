@@ -33,10 +33,11 @@ class SavedItems extends Component {
     render() {
         return (
             <Container>
+                <br />
                 <Row>
                     <Col size="md-4">
                         {this.state.items.length ? (
-                            <div>
+                            <div className="container-background">
                                 <h5>Saved Items</h5>
                                 {this.state.items.map(item => (
                                     <Item
@@ -52,7 +53,9 @@ class SavedItems extends Component {
                                 ))}
                             </div>
                         ) : (
+                            <div className="container-background">
                                 <h5>No Items Saved</h5>
+                            </div>
                             )}
                     </Col>
                 </Row>
