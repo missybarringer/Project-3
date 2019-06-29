@@ -28,6 +28,7 @@ class ChartItems extends Component {
     render() {
         return (
             <Container>
+                <br />
                 <BarChart/>
             </Container>
         );

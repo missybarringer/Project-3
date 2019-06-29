@@ -79,9 +79,13 @@ body {
     text-align: center;
 }
 
-/* .jumbotron .container {
-    opacity: 1;
+/* .container-background > .item {
+    background-color: white;
+    opacity: .7;
+    z-index: -1;
 } */
+
+
 
 .align-center {
     position: absolute;
