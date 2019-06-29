@@ -14,6 +14,11 @@ const TopNav = () => {
             </Navbar.Text>
             <Navbar.Collapse className="justify-content-end">
                 <Nav className="align-right">
+                    <Nav.Link href="/" className="text-center">
+                        <img className="bounce" src="../../images/logo.png" alt="home" height="30px"/>
+                        <br />
+                        Home
+                    </Nav.Link>
                     <Nav.Link href="/additem" className="text-center">
                         <img className="bounce" src="../../images/add.png" alt="add item" height="30px"/>
                         <br />

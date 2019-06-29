@@ -66,12 +66,57 @@ body {
     }
   }
 
-/* not currently in use */
 .logo-watermark {
-    position: fixed;
-    height: 90%;
-    z-index: -10;
+    /* position: fixed; */
+    /* height: 50px; */
+    /* z-index: -10; */
     opacity: 0.1;
+}
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    /* background-size: contain; */
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    background-color: #343a40;
+    color: #343a40;
+}
+
+.card:hover {
+    display: inline-block;
+    margin: 10px;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    background-color:#f8f9fa;
+    color: #343a40;
+
+}
+
+.card-img {
+    opacity: .05;
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    /* color: #f8f9fa; */
+}
+
+.card-title:hover {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    /* color: #343a40; */
+}
+
+.card-text {
+    font-family: 'Cinzel', serif;
+    font-size: .3rem;
+    text-align: left;
 }
 
 .chart {

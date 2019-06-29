@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row, Container } from "react-bootstrap";
-import API from "../utils/ItemAPI"
+import API from "../utils/ItemAPI";
 import Item from '../components/Item';
 
 class SavedItems extends Component {
