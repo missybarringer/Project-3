@@ -6,7 +6,7 @@ const itemSchema = new Schema({
     name: { type: String, required: true },
     quantity: Number,
     notes: String,
-    date: { type: Date, default: Date.now }
+    date: String
 });
 
 const Item = mongoose.model("Item", itemSchema);
