@@ -34,6 +34,11 @@ const TopNav = () => {
                         <br />
                         Chart
                     </Nav.Link>
+                    <Nav.Link href="/login" className="text-center">
+                        <img className="bounce" src="../../images/logo.png" alt="logout" height="30px"/>
+                        <br />
+                        Logout
+                    </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
