@@ -3,7 +3,6 @@ import { Col, Row, Container, Button, Form } from "react-bootstrap";
 import API from "../utils/ItemAPI"
 import Item from '../components/Item';
 import { Input, TextArea } from "../components/Form";
-import DayPickerInput from "react-day-picker/DayPickerInput";
 
 import "react-day-picker/lib/style.css";
 
@@ -31,6 +30,14 @@ class Search extends Component {
         event.preventDefault();
     };
     
+    handleDayChange(selectedDay, modifiers, dayPickerInput) {
+        console.log(selectedDay);
+        const input = dayPickerInput.getInput();
+        this.setState({
+          date: selectedDay,
+        });
+      }
+
     handleFormSubmit = event => {
         event.preventDefault();
         console.log("Category " + this.state.category + "Name " + this.state.name + "quant " + this.state.quantity + "notes " + this.state.notes + "date " + this.state.date);
@@ -44,11 +51,10 @@ class Search extends Component {
             .then(res => alert("Item saved", res))
             .catch(err => console.log(err));
     }
+
     render() {
-        const { selectedDay } = this.state
         return (
             <Container>
-                <br />
                 <Row>
                     <Col size="md-4">
                         <h3>Add Item</h3>
@@ -78,10 +84,13 @@ class Search extends Component {
                             placeholder="Notes (Optional)" 
                             rows="3"
                             />
-                            <DayPickerInput 
-                            value={selectedDay}
-                            placeholer="DD/MM/YYYY" 
-                            format="DD/MM/YYYY" /><br />
+                            <Input
+                            value={this.state.date}
+                            onChange={this.handleInputChange}
+                            name="date"
+                            placeholder="Date (required)"
+                            />
+                            <br />
                             <Button
                                 variant="dark"
                                 type="submit"
