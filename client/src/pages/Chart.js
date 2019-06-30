@@ -1,38 +1,33 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Media from "react-bootstrap/Media";
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from "victory";
-import DropdownList from "react-widgets/lib/DropdownList";
-
-// import Item from '../components/Item';
-
-// const data = [
-//     {quarter: 1, earnings: 13000},
-//     {quarter: 2, earnings: 16500},
-//     {quarter: 3, earnings: 14250},
-//     {quarter: 4, earnings: 19000}
-//   ];
+import { VictoryBar, VictoryTheme} from "victory";
 
 const BarChart = props => {
-  return (
-    <div key={props.id} className="p-3 mb-3 bg-dark shadow rounded chart">
-      <h1>Test Chart</h1>
-      <VictoryChart
-        style={{ parent: { maxWidth: "30%" } }}
-        domainPadding={10}
-        theme={VictoryTheme.material}
-      >
-        <VictoryBar
-          data={[
-            { employee: "Jane Doe", salary: 70 },
-            { employee: "John Doe", salary: 20 }
-          ]}
-          x="employee"
-          y="salary"
-        />
-      </VictoryChart>
-    </div>
-  );
+  let barData = []
+
+  // props.data
+  //   .reduce((acc, curr) => {
+  //     if (!acc[curr.category]) {
+  //       acc[curr.category] = { category: curr.category, quantity: 0 }
+  //      barData.push(acc[curr.category])
+  //     }
+  //     acc[curr.category].quantity += curr.quantity
+  //     return acc
+  //   }, {})
+
+  // return (
+  //       <VictoryBar
+  //         data={barData}
+  //         x={barData.quantity}
+  //         y={barData.category}
+  //         style={{ parent: { maxWidth: "30%" }, display:"inline"}}
+  //         domainPadding={10}
+  //         // theme={VictoryTheme.material}
+  //         colorScale={["crimson"]}
+  //       />
+  // );
+  return ("<Bar Chart Will Render Here....Eventually")
 };
 
 // dropDownList() {

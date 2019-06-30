@@ -149,3 +149,7 @@ h1 {
 .itemColor{
     background-color:#f54b42;
 }
+
+.chartAlign{
+    display:inline;
+}
