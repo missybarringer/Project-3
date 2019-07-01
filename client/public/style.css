@@ -13,16 +13,6 @@ body {
     max-height: 100px;
 }
 
-.jumbotron {
-    padding: 2rem 1rem;
-    background-color: #dbdaded2;
-}
-
-/* not currently in use */
-.navbar-brand {
-    animation-timing-function: ease;
-}
-
 /* animate logo */
 .logo {
     height: 100px;
@@ -76,7 +66,6 @@ body {
 .card {
     display: inline-block;
     margin: 10px;
-    /* background-size: contain; */
     width: 250px;
     height: 200px;
     text-align: center;
@@ -115,7 +104,7 @@ body {
 
 .card-text {
     font-family: 'Cinzel', serif;
-    font-size: .3rem;
+    font-size: .75rem;
     text-align: left;
 }
 
@@ -130,6 +119,22 @@ body {
     z-index: -1;
 } */
 
+.stock-card {
+    display: block;
+    text-align: left;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    background-color:#f8f9fa;
+}
+.stock-card:hover {
+    display: block;
+    text-align: left;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    background-color:#f8f9fa;
+}
 
 
 .align-center {
@@ -147,5 +152,5 @@ h1 {
 }
 
 .itemColor{
-    background-color:#f54b42;
+    background-color:#dc3545;
 }
