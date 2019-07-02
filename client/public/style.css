@@ -13,16 +13,6 @@ body {
     max-height: 100px;
 }
 
-.jumbotron {
-    padding: 2rem 1rem;
-    background-color: #dbdaded2;
-}
-
-/* not currently in use */
-.navbar-brand {
-    animation-timing-function: ease;
-}
-
 /* animate logo */
 .logo {
     height: 100px;
@@ -73,10 +63,13 @@ body {
     opacity: 0.1;
 }
 
+p {
+    margin-bottom: .25rem;
+}
+
 .card {
     display: inline-block;
     margin: 10px;
-    /* background-size: contain; */
     width: 250px;
     height: 200px;
     text-align: center;
@@ -91,7 +84,7 @@ body {
     height: 200px;
     text-align: center;
     background-color:#f8f9fa;
-    color: #343a40;
+    color: #343a40 !important;
 
 }
 
@@ -103,19 +96,25 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: bold;
-    /* color: #f8f9fa; */
+    /* background-color: #f8f9fa; */
+    color: #343a40;
+    /* margin: #f8f9fa; */
 }
 
 .card-title:hover {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: bold;
-    /* color: #343a40; */
+    
+}
+
+.card, .card-title:hover {
+    color: #343a40;
 }
 
 .card-text {
     font-family: 'Cinzel', serif;
-    font-size: .3rem;
+    font-size: .75rem;
     text-align: left;
 }
 
@@ -130,7 +129,27 @@ body {
     z-index: -1;
 } */
 
+.stock-card {
+    display: block;
+    text-align: left;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color:#f8f9fa;
+}
+.stock-card:hover {
+    display: block;
+    text-align: left;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    background-color:#f8f9fa;
+}
 
+.card-header {
+    padding: 0;
+    text-align: center;
+}
 
 .align-center {
     position: absolute;
@@ -147,7 +166,7 @@ h1 {
 }
 
 .itemColor{
-    background-color:#f54b42;
+    background-color:#dc3545;
 }
 
 .chartAlign{
