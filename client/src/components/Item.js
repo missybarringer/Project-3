@@ -15,9 +15,9 @@ const Item = props => {
                 <Card.Title>{props.name}</Card.Title>
                 <hr />
                 <Card.Text>Category: {props.category}</Card.Text>
-                <Card.Text>Notes: {props.notes}</Card.Text>
                 <Card.Text>Quantity Remaining: {props.quantity}</Card.Text>
                 <Card.Text>Restock Date: {props.date}</Card.Text>
+                <Card.Text>Notes: {props.notes}</Card.Text>
             </Card.ImgOverlay>
         </Card>
     );

@@ -63,6 +63,10 @@ body {
     opacity: 0.1;
 }
 
+p {
+    margin-bottom: .25rem;
+}
+
 .card {
     display: inline-block;
     margin: 10px;
@@ -80,7 +84,7 @@ body {
     height: 200px;
     text-align: center;
     background-color:#f8f9fa;
-    color: #343a40;
+    color: #343a40 !important;
 
 }
 
@@ -92,14 +96,20 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: bold;
-    /* color: #f8f9fa; */
+    /* background-color: #f8f9fa; */
+    color: #343a40;
+    /* margin: #f8f9fa; */
 }
 
 .card-title:hover {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: bold;
-    /* color: #343a40; */
+    
+}
+
+.card, .card-title:hover {
+    color: #343a40;
 }
 
 .card-text {
@@ -122,7 +132,7 @@ body {
 .stock-card {
     display: block;
     text-align: left;
-    margin: 10px;
+    padding: 0;
     width: 100%;
     height: auto;
     background-color:#f8f9fa;
@@ -136,6 +146,10 @@ body {
     background-color:#f8f9fa;
 }
 
+.card-header {
+    padding: 0;
+    text-align: center;
+}
 
 .align-center {
     position: absolute;

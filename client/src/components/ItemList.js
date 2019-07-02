@@ -36,9 +36,9 @@ const ItemList = props => {
                 <Accordion.Collapse eventKey="0">
                     <Card.Body>
                         <Card.Text>Category: {props.category}</Card.Text>
-                        <Card.Text>Notes: {props.notes}</Card.Text>
                         <Card.Text>Quantity Remaining: {props.quantity}</Card.Text>
                         <Card.Text>Restock Date: {props.date}</Card.Text>
+                        <Card.Text>Notes: {props.notes}</Card.Text>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
