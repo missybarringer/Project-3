@@ -168,3 +168,7 @@ h1 {
 .itemColor{
     background-color:#dc3545;
 }
+
+.chartAlign{
+    display:inline;
+}
