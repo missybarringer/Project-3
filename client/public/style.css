@@ -1,6 +1,4 @@
 * {
-    /* font-family: 'Amatic SC', cursive; */
-    /* font-family: 'Cinzel', serif; */
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -57,9 +55,6 @@ body {
   }
 
 .logo-watermark {
-    /* position: fixed; */
-    /* height: 50px; */
-    /* z-index: -10; */
     opacity: 0.1;
 }
 
@@ -84,8 +79,6 @@ p {
     height: 200px;
     text-align: center;
     background-color:#f8f9fa;
-    color: #343a40 !important;
-
 }
 
 .card-img {
@@ -96,9 +89,7 @@ p {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: bold;
-    /* background-color: #f8f9fa; */
     color: #343a40;
-    /* margin: #f8f9fa; */
 }
 
 .card-title:hover {
@@ -122,12 +113,6 @@ p {
     margin: 0 10%;
     text-align: center;
 }
-
-/* .container-background > .item {
-    background-color: white;
-    opacity: .7;
-    z-index: -1;
-} */
 
 .stock-card {
     display: block;
