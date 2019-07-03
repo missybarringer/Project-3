@@ -38,7 +38,7 @@ render() {
                         </Form.Group>
 
                         <Button
-                            variant="success"
+                            variant="danger"
                             onClick={this.handlePageChange}
                         >
                             Login

@@ -3,6 +3,16 @@ import { Col, Row, Container, Button, Form } from "react-bootstrap";
 
 class Signup extends Component {
 
+constructor(props, context) {
+    super(props, context);
+
+    this.handlePageChange = this.handlePageChange.bind(this);
+}
+
+handlePageChange() {
+    window.location = "/home"
+}
+
 render() {
     return (
         <Container>
@@ -44,8 +54,8 @@ render() {
                         </Form.Group>
 
                         <Button
-                            variant="success"
-                            type="submit"
+                            variant="danger"
+                            onClick={this.handlePageChange}
                         >
                             Signup
                         </Button>
