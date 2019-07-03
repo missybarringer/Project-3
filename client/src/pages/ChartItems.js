@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import API from "../utils/ChartAPI";
 // import Item from '../components/Chart';
 import BarChart from "./Chart";
 import PieChart from "./PieChart";
-import { VictoryChart, VictoryTheme } from "victory";
 
 class ChartItems extends Component {
   state = {
@@ -46,15 +45,15 @@ class ChartItems extends Component {
     if (this.state.pieVisible) {
       showPie = (
         <div>
-      <PieChart/>
+      <PieChart data={this.state.items}/>
         </div>
       )
     }
 
     if (this.state.barVisible) {
       showPie = (
-        <div>
-          <BarChart/>
+        <div className="chart">
+          <BarChart data={this.state.items}/>
         </div>
       );
     }
