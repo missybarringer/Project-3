@@ -5,16 +5,14 @@ import Nav from "react-bootstrap/Nav";
 const TopNav = () => {
     return (
         <Navbar bg="light" variant="light">
-            <Navbar.Brand href="/">
+            <Navbar.Brand href="/home">
                 <img className="logo" src="../../images/logo.png" alt="abode logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-            <Navbar.Text className="align-center">
-                {/* <h1>ABODE</h1> */}
-            </Navbar.Text>
+
             <Navbar.Collapse className="justify-content-end">
                 <Nav className="align-right">
-                    <Nav.Link href="/" className="text-center">
+                    <Nav.Link href="/home" className="text-center">
                         <img className="bounce" src="../../images/logo.png" alt="home" height="30px"/>
                         <br />
                         Home
@@ -34,7 +32,7 @@ const TopNav = () => {
                         <br />
                         Chart
                     </Nav.Link>
-                    <Nav.Link href="/login" className="text-center">
+                    <Nav.Link href="/" className="text-center">
                         <img className="bounce" src="../../images/logo.png" alt="logout" height="30px"/>
                         <br />
                         Logout
