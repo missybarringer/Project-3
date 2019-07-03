@@ -1,34 +1,39 @@
 import React from "react";
-import { VictoryPie, VictoryTheme } from "victory";
+import { VictoryPie, VictoryTheme, VictoryChart, VictoryLabel } from "victory";
 
 const PieChart = props => {
-  let pieData = []
-  console.log(props.data);
-  props.data
-    .reduce((acc, curr) => {
-      if (!acc[curr.category]) {
-        acc[curr.category] = { category: curr.category, quantity: 0 }
-       pieData.push(acc[curr.category])
-      }
-      acc[curr.category].quantity += curr.quantity
-      return acc
-    }, {})
+  let pieData = [];
 
-  // return (
-  //   <VictoryPie
-  //       data={pieData}
-  //     x={pieData.category}
-  //     y={pieData.quantity}
-  //     style={{ parent: { maxWidth: "35%" }, display: "inline" }}
-  //     domainPadding={10}
-  //     theme={VictoryTheme.material}
-  //     colorScale={["firebrick", "salmon"]}
-  //     innerRadius={25}
-  //   />
-  // );
+  props.data.reduce((acc, curr) => {
+    if (!acc[curr.category]) {
+      acc[curr.category] = { category: curr.category, quantity: 0 };
+      pieData.push(acc[curr.category]);
+    }
+    acc[curr.category].quantity += curr.quantity;
+    return acc;
+  }, {});
+
+  const styles = {
+    parent: { maxWidth: "45%", maxHeight: "50%" },
+    backgroundColor: "lightgrey",
+    labels: { fill: "black", fontSize: 15, fontWeight: "bold" }
+  };
+
   return (
-    "<Pie Chart Will Render Here....Eventually"
-  )
+    <VictoryPie
+      domainPadding={5}
+      height={800}
+      width={800}
+      padAngle={3}
+      cornerRadius={25}
+      // colorScale={["crimson", "lightgrey"]}
+      data={pieData}
+      x="category"
+      y="category"
+      style={styles}
+      colorScale={["firebrick", "lightgrey", "crimson"]}
+    />
+  );
 };
 
 export default PieChart;
