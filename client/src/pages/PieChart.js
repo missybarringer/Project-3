@@ -1,5 +1,5 @@
 import React from "react";
-import { VictoryPie, VictoryTheme, VictoryContainer } from "victory";
+import { VictoryPie, VictoryTheme, VictoryChart, VictoryLabel } from "victory";
 
 const PieChart = props => {
   let pieData = [];
@@ -13,23 +13,27 @@ const PieChart = props => {
     return acc;
   }, {});
 
-  return (
-    <VictoryContainer
-      theme={VictoryTheme.material}
-      domainPadding={10}
-      style={{ parent: { maxWidth: "35%" }, display: "inline" }}
-    >
-      <VictoryPie
-        data={pieData}
-        x="pieData.category"
-        y="pieData.quantity"
-        labels={pieData => pieData.category}
-        colorScale={["firebrick", "salmon"]}
-      />
-    </VictoryContainer>
-  );
+  const styles = {
+    parent: { maxWidth: "45%", maxHeight: "50%" },
+    backgroundColor: "lightgrey",
+    labels: { fill: "black", fontSize: 15, fontWeight: "bold" }
+  };
 
-  return "<Pie Chart Will Render Here....Eventually";
+  return (
+    <VictoryPie
+      domainPadding={5}
+      height={800}
+      width={800}
+      padAngle={3}
+      cornerRadius={25}
+      // colorScale={["crimson", "lightgrey"]}
+      data={pieData}
+      x="category"
+      y="category"
+      style={styles}
+      colorScale={["firebrick", "lightgrey", "crimson"]}
+    />
+  );
 };
 
 export default PieChart;

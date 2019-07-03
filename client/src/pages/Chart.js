@@ -36,32 +36,11 @@ const BarChart = props => {
         y="quantity"
         labels={barData => barData.category}
         style={styles}
-
       />
     </VictoryChart>
   );
 
-  // return ("<Bar Chart Will Render Here....Eventually")
 };
 
-// dropDownList() {
-// let { DropdownList } = ReactWidgets;
-// let people = listOfPeople();
-
-// let widgets = (
-//   <div>
-//     <DropdownList
-//       data={items}
-//       textField='name'
-//       groupBy='category'
-//     />
-
-//   </div>
-// )
-// }
-// <VictoryAxis tickValues={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]}
-// />
-// <VictoryAxis dependentAxis tickFormat={(x) => (`$${x / 1000}k`)}
-// />
 
 export default BarChart;
