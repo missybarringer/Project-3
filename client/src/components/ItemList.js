@@ -9,12 +9,13 @@ const ItemList = props => {
                 <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
                         <Card.Title>{props.name}</Card.Title>
+                        <Card.Text>Quantity Remaining: {props.quantity}</Card.Text>
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
                     <Card.Body>
                         <Card.Text>Category: {props.category}</Card.Text>
-                        <Card.Text>Quantity Remaining: {props.quantity}</Card.Text>
+                        
                         <Card.Text>Restock Date: {props.date}</Card.Text>
                         <Card.Text>Notes: {props.notes}</Card.Text>
                     </Card.Body>
