@@ -56,7 +56,6 @@ class Search extends Component {
         return (
             <Container>
                 <Row>
-                    <br />
                     <Col size="md-4">
                         <h3>Add Item</h3>
                         <Form>
@@ -104,7 +103,7 @@ class Search extends Component {
                         </Form>
                     </Col>
                 </Row>
-                <Row className="mt-3">
+                {/* <Row className="mt-3">
                     <Col size="md-12">
                         {this.state.items.length ? (
                             <div>
@@ -125,7 +124,7 @@ class Search extends Component {
                                 <h5>No Items to Display</h5>
                             )}
                     </Col>
-                </Row>
+                </Row> */}
             </Container>
         );
     }
