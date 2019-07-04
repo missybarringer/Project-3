@@ -56,6 +56,7 @@ class Search extends Component {
         return (
             <Container>
                 <Row>
+                    <br />
                     <Col size="md-4">
                         <h3>Add Item</h3>
                         <Form>
@@ -92,7 +93,7 @@ class Search extends Component {
                             />
                             <br />
                             <Button
-                                variant="dark"
+                                variant="danger"
                                 type="submit"
                                 // disabled={!(this.state.query)}
                                 // used to call saveBtn on line 39 with API returned info MMB

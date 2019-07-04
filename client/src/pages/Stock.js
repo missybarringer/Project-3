@@ -42,10 +42,11 @@ class Stock extends Component {
                                 {this.state.items.map(item => (
                                     <ItemList
                                         key={item._id}
-                                        label="Delete"
+                                        // label="Delete"
                                         id={item._id}
                                         category={item.category}
                                         name={item.name}
+                                        date={item.date}
                                         quantity={item.quantity}
                                         notes={item.notes}
                                         btnFunc={() => this.deleteBtn(item._id)}
