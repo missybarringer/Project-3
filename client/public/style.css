@@ -112,6 +112,7 @@ p {
 .chart {
     margin: 0 10%;
     text-align: center;
+    background-color: grey;
 }
 
 .stock-card {
@@ -157,3 +158,4 @@ h1 {
 .chartAlign{
     display:inline;
 }
+
