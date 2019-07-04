@@ -12,7 +12,7 @@ const itemSeed = [
   {
     category: "Cleaning Supplies",
     name: "Bleach",
-    quantity: "1",
+    quantity: 1,
     notes: "",
     date: new Date(Date.now())
   },

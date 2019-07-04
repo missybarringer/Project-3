@@ -38,7 +38,7 @@ class SavedItems extends Component {
                     <Col size="md-4">
                         {this.state.items.length ? (
                             <div className="container-background">
-                                <h5>Saved Items</h5>
+                                <h5>Restock This Week</h5>
                                 {this.state.items.map(item => (
                                     <Item
                                         key={item._id}
