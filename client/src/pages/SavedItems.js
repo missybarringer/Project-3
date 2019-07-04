@@ -45,6 +45,8 @@ class SavedItems extends Component {
                                         label="Delete"
                                         id={item._id}
                                         category={item.category}
+                                        // use moment to convert date format
+                                        date={item.date}
                                         name={item.name}
                                         quantity={item.quantity}
                                         notes={item.notes}
