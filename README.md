@@ -50,6 +50,16 @@ The application is hosted through heroku and is available at the below link.
 
 https://project-3-vbc.herokuapp.com/
 
+## Application Design & Flow
+
+Adobe XD was leveraged for page design diagramming.
+
+![Page Design](../client/public/images/page-flow.png)
+
+Draw.io was used to build out the logical flow of application.
+
+![Flow](../client/public/images/Project3-AppFlow.png)
+
 ## Project Technical Specs
 Abode Organizere is a MERN stack application that is hosted on heroku with a jawsdb database.  The application utilizes passport js and bcrypt to authenticate users.  Additionally, Mongoose models are used to access the jawsdb (mongoDB locally).
 
