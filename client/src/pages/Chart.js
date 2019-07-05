@@ -1,6 +1,4 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import Media from "react-bootstrap/Media";
 import { VictoryBar, VictoryChart, VictoryTheme } from "victory";
 
 const BarChart = props => {
@@ -28,7 +26,7 @@ const BarChart = props => {
     theme={VictoryTheme.material} 
     colorScale={["crimson"]}
     height={500}
-    width={1000}
+    width={1200}
     domainPadding={10}>
 
       <VictoryBar
