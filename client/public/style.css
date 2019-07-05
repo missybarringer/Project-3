@@ -3,8 +3,9 @@
 }
 
 body {
-    background-image: url(./images/background.jpg);
+    background-image: url(./images/background3.jpg);
     background-size: 100%;
+    z-index: -100;
 }
 
 .navbar {
@@ -135,6 +136,8 @@ p {
 .card-header {
     padding: 0;
     text-align: center;
+    background-color:#f8f9fa;
+
 }
 
 .align-center {
