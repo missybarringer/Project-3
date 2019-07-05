@@ -2,7 +2,7 @@
 
 Abode Organizer is a home organization helper tool that helps families keep track of recurring activities or home item purchases that need to be done.
 
-![Demo](../client/public/images/homepage-demo.gif)
+![Demo](./client/public/images/homepage-demo.gif)
 
 ## Getting Started
 
@@ -54,16 +54,16 @@ https://project-3-vbc.herokuapp.com/
 
 Adobe XD was leveraged for page design diagramming.
 
-![Page Design](../client/public/images/page-flow.png)
+![Page Design](./client/public/images/page-flow.png)
 
 Draw.io was used to build out the logical flow of application.
 
-![Flow](../client/public/images/Project3-AppFlow.png)
+![Flow](./client/public/images/Project3-AppFlow.png)
 
 ## Project Technical Specs
 Abode Organizere is a MERN stack application that is hosted on heroku with a jawsdb database.  The application utilizes passport js and bcrypt to authenticate users.  Additionally, Mongoose models are used to access the jawsdb (mongoDB locally).
 
-![Tech](../client/public/images/tech.png)
+![Tech](./client/public/images/tech.png)
 
 ## Contributors
 Missy Barringer - DB seeding, Routing, Graphic Design
