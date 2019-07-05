@@ -66,7 +66,7 @@ Abode Organizere is a MERN stack application that is hosted on heroku with a jaw
 ![Tech](./client/public/images/tech.png)
 
 ## Contributors
-Missy Barringer - DB seeding, Routing, Graphic Design
-John Westbrooks - Authentication
-Rob Suttles - Data Visualizations, React
-Brian Storey - React, Front-End Design
+**Missy Barringer** - DB seeding, Routing, Graphic Design \
+**John Westbrooks** - Authentication \
+**Rob Suttles** - Data Visualizations, React \
+**Brian Storey** - React, Front-End Design
