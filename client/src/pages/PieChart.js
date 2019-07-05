@@ -16,14 +16,14 @@ const PieChart = props => {
   const styles = {
     parent: { maxWidth: "45%", maxHeight: "50%" },
     backgroundColor: "lightgrey",
-    labels: { fill: "black", fontSize: 15, fontWeight: "bold" }
+    labels: { fill: "black", fontSize: 20, fontWeight: "bold" }
   };
 
   return (
     <VictoryPie
       domainPadding={5}
       height={800}
-      width={800}
+      width={1050}
       padAngle={3}
       cornerRadius={25}
       // colorScale={["crimson", "lightgrey"]}
