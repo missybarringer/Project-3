@@ -61,6 +61,7 @@ Draw.io was used to build out the logical flow of application.
 ![Flow](./client/public/images/Project3-AppFlow.png)
 
 ## Project Technical Specs
+
 Abode Organizer is a MERN stack application that is hosted on heroku with a mLab database (mongoDB locally).  The application utilizes passport js and bcrypt to authenticate users.
 
 ![Tech](./client/public/images/tech.png)
