@@ -61,12 +61,13 @@ Draw.io was used to build out the logical flow of application.
 ![Flow](./client/public/images/Project3-AppFlow.png)
 
 ## Project Technical Specs
-Abode Organizere is a MERN stack application that is hosted on heroku with a jawsdb database.  The application utilizes passport js and bcrypt to authenticate users.  Additionally, Mongoose models are used to access the mLab DB on Heroku (mongoDB locally).
+
+Abode Organizer is a MERN stack application that is hosted on heroku with a mLab database (mongoDB locally).  The application utilizes passport js and bcrypt to authenticate users.
 
 ![Tech](./client/public/images/tech.png)
 
 ## Contributors
-Missy Barringer - DB seeding, Routing, Graphic Design
-John Westbrooks - Authentication
-Rob Suttles - Data Visualizations, React
-Brian Storey - React, Front-End Design
+**Missy Barringer** - DB seeding, Routing, Graphic Design \
+**John Westbrooks** - Authentication \
+**Rob Suttles** - Data Visualizations, React \
+**Brian Storey** - React, Front-End Design
