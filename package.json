@@ -31,7 +31,7 @@
     "react-day-picker": "^7.3.0",
     "react-dom": "^16.8.6",
     "react-widgets": "^4.4.11",
-    "victory": "^32.3.0",
-    "victory-area": "^32.3.0"
+    "victory": "^36.6.8",
+    "victory-area": "^36.6.8"
   }
 }
